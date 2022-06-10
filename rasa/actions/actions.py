@@ -11,7 +11,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import requests
-from jokes import Joke
+from api import Joke , Quotes
+
 
 #
 #
@@ -28,15 +29,27 @@ from jokes import Joke
 #
 #         return []
 class ActionHelloWorld(Action):
-
+     print(Action)
      def name(self) -> Text:
-         return "action_jokeapi"
+        return "action_api"
 
      def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Inside action")     
-        joke= str(Joke())
-        dispatcher.utter_message(text=joke)
+        print("Inside action")
+        if((tracker.latest_message['intent'].get('name'))=="joke"):
+         response=Joke()    
+         if(response['type']=='twopart'):
+            joke = response['setup'] + '\n'+response['delivery']  
+         else:
+            joke = response['joke']     
+         dispatcher.utter_template("utter_joke",tracker,text=joke)
+
+        else:
+         response=Quotes()
+                 
+         dispatcher.utter_template("utter_quote",tracker,text=(response['q'])) 
 
         return []
+
+
