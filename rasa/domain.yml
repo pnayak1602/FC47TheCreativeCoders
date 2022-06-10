@@ -11,6 +11,8 @@ intents:
   - help
   - joke
   - quotes
+  - out_of_scope
+  - nlu_fallback
 
 responses:
   utter_greet:
@@ -39,10 +41,18 @@ responses:
   - text: "Here's a joke for you my friend : {text} ."
   utter_quote:
   - text: "Here's a quote from you my friend: {text}."
+  utter_out_of_scope:
+  - text: "Sorry I can't handle this request .I am an ordinary moodbot . \n Let's chat something else "
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
 actions:
   - action_api
   - utter_joke
   - utter_quote
+  - utter_out_of_scope
+  - utter_please_rephrase
+  
 
 session_config:
   session_expiration_time: 60
