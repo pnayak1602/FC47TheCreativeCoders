@@ -38,3 +38,12 @@ stories:
   steps:
     - intent: quotes
     - action: action_api
+
+- story: out of scope
+  steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+- story: nlu fallback
+  steps:
+    - intent: nlu_fallback
+    - action: utter_please_rephrase
