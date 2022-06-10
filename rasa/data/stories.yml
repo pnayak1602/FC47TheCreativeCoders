@@ -27,8 +27,14 @@ stories:
   - action: utter_cheer_up
   - action: utter_did_that_help
   - intent: deny
+  - intent: deny
   - action: utter_goodbye
+
 - story: joke path
   steps:
     - intent: joke
-    - action: action_jokeapi
+    - action: action_api
+- story : quote path
+  steps:
+    - intent: quotes
+    - action: action_api
