@@ -105,6 +105,13 @@ nlu:
     - Can you tell me a joke ?
     - Can you joke
     - Do something fun
+- intent: quotes
+  examples: |
+    - I need motivation
+    - I feel demotivated
+    - I am not special 
+    - I need inspiration
+    - I need purpose     
 
 
 
