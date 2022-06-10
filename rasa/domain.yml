@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - help
   - joke
+  - quotes
 
 responses:
   utter_greet:
@@ -36,9 +37,14 @@ responses:
 
   utter_joke:
   - text: "Here's a joke for you my friend : {text} ."
-  actions:
-  - action_jokeapi
+  utter_quote:
+  - text: "Here's a quote from you my friend: {text}."
+actions:
+  - action_api
+  - utter_joke
+  - utter_quote
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
