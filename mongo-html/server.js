@@ -12,9 +12,9 @@ mongoose.connect('mongodb+srv://pranamya:mady123@cluster0.kybnra9.mongodb.net/Ta
 
 const doctorsSchema = {
 
-    first_name: String,
-    last_name: String,
-
+    name: String,
+    address: String,
+    exp: String,
     location: String,
     specialization: String,
     email_id: String
@@ -22,16 +22,20 @@ const doctorsSchema = {
 
 
 app.use(urlencoded({ extended: true }));
-const Doctor = mongoose.model('Doctor', doctorsSchema);
+
 
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index1.html");
 });
 
 app.post('/', (req, res) => {
-    console.log(req.body);
-    // const r = req.body;
-    Doctor.find({}, function (err, Doctors) {
+    // console.log(req.body);
+    const r = req.body;
+    const Doctor = mongoose.models.Doctor || mongoose.model('Doctor', doctorsSchema)
+
+    Doctor.find({ specialization: r.sp }, function (err, Doctors) {
+        // console.log(r.sp);
+        //  console.log(Doctors);
         res.render('index', {
             dList: Doctors
         })
