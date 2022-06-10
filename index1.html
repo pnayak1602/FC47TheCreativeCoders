@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico?v1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <title>Take Care | Online health care specialist</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
+    <meta name="theme-color" content="#712cf9" />
+  </head>
+  <body>
+    <div class="top">
+      <img
+        class="top-cloud"
+        src="./images/My_project__1_-removebg-preview (1).png"
+        alt="cloudImage"
+      />
+      <h1>Take Care</h1>
+      <h2 class="text"><b></b></h2>
+    </div>
+    <div class="middle-container">
+      <div class="profile">
+        <img
+          src="./images/Hospital_Medical_Design_Png_Element__Hospital__Helicopter__Urgency_PNG_and_Vector_with_Transparent_Background_for_Free_Download-removebg-preview.png"
+          alt="profile_pic"
+          width="200px"
+        />
+        <h2>About Us.</h2>
+        <p>
+          Take care allows us to book doctors' appointments online. We can
+          directly enquire with the doctor and get a visit date fixed based on
+          the convenience of the doctor.<br />
+        </p>
+      </div>
+      <hr class="dots" />
+      <div class="skills">
+        <!-- <h2>My Favs.</h2> -->
+        <div class="skill-row">
+          <img
+            class="photoimage"
+            src="./images/filename (1).jpg"
+            alt="photography"
+            width="30%"
+          />
+          <h3>Why Us?</h3>
+          <p>
+            The entire hustle and bustle of getting appointments fixed through
+            hospitals vanishes. Otherwise, we had to visit the hospital just to
+            get an appointment a week later.
+          </p>
+        </div>
+        <div class="skill-row">
+          <img
+            class="spaceimage"
+            src="./images/filename.jpg"
+            alt="spacecraft"
+            width="30%"
+          />
+          <h3>How do we plan to implement?</h3>
+          <p>
+            The entire process of booking an appointment happens at the tip of
+            your fingers and is a very transparent process. The online platform
+            makes more sense given the COVID outbreak in 2019.
+          </p>
+        </div>
+      </div>
+      <hr class="dots" />
+    </div>
+    <h2>Choose a Domain</h2>
+    <div class="container">
+      <div id="domains">
+        <div class="heart">
+          <button type="submit" name="sp" value="">Heart</button>
+        </div>
+        <br /><br />
+        <div class="eyes">
+          <button type="submit" name="sp" value="">Eyes</button>
+        </div>
+        <br /><br />
+        <div class="ortho">
+          <button type="submit" name="sp" value="">Ortho</button>
+        </div>
+        <br /><br />
+        <div class="dentist">
+          <button type="submit" name="sp" value="">Dentist</button>
+        </div>
+        <br /><br />
+        <div class="pediatrician">
+          <button type="submit" name="sp" value="">Pediatrician</button>
+        </div>
+        <br />
+        <div class="brain">
+          <button type="submit" name="sp" value="">Brain</button>
+        </div>
+        <br /><br /><br />
+        <div class="brain">
+          <br /><button type="submit" name="sp" value="">
+            Boo Boo Bot
+          </button>
+        </div>
+        <br /><br /><br />
+      </div>
+      <div id="scrollImg">
+        <img src="./scroll images/heart.png" class="heart" />
+      </div>
+    </div>
+     
+    <script>
+      var i = 0;
+      var speed = 110;
+      var txt = "Your online health care specialist ❤️";
+      // console.log(txt);
+      var x = txt.length;
+      function typeWriter() {
+        if (i < x) {
+          // console.log("i : " + i + "txt.length : " + txt.length);
+          document.getElementsByClassName("text")[0].innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+
+      $("#domains div").hover(function () {
+        document.querySelectorAll("#scrollImg img")[0].src =
+          "./scroll images/" + this.className + ".png";
+      });
+    </script>
+  </body>
+</html>
