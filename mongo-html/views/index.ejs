@@ -9,20 +9,32 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="color: #AEFEFF; background-color: #072227; text-align: center;">
 
 
+    <%dList.forEach(doctor=> {%>
+        <div style="width: 300px">
+            <div style="float: left">
+                <%= doctor.name %> <br>
+                    <%= doctor.address %> <br>
+                        <!-- <%= doctor.specialization %><br> -->
+                        <img src="/images/doctor-icon-avatar-white_136162-58-removebg-preview.png"
+                            style="width:100px; height: 100px">
+                        <%= doctor.years %><br>
+            </div>
+            <button style="float: right" type="submit" name="submit"><a href="#">SUBMIT</a></button>
+        </div>
+        <%})%>
 
-
-
-    <table class="table">
+            <!-- <table class="table">
         <thead>
             <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
                 <th scope="col">Specialization</th>
                 <th scope="col">e-mail ID</th>
                 <th scope="col">Location</th>
+                <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
@@ -30,24 +42,25 @@
                 <tr>
 
                     <td>
-                        <%= doctor.first_name %>
+                        <%= doctor.name %>
                     </td>
                     <td>
-                        <%= doctor.last_name %>
+                        <%= doctor.address %>
                     </td>
                     <td>
                         <%= doctor.specialization %>
                     </td>
                     <td>
-                        <%= doctor.email_id %>
+                        <%= doctor.years %>
                     </td>
+                    <td></td>
                     <td>
-                        <%= doctor.location %>
+                        <button type="submit" name="submit"><a href="#">SUBMIT</a></button>
                     </td>
                 </tr>
                 <%})%>
         </tbody>
-    </table>
+    </table> -->
 </body>
 
 </html>
