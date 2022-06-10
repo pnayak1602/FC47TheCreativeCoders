@@ -39,6 +39,14 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yup
+    - exactly  
+    - accurately
+    - I agree
+    - absolutely 
+    - okay
+    - ok
+    - sure
 
 - intent: deny
   examples: |
@@ -49,6 +57,9 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nope
+    - nah
+    - no chance 
 
 - intent: mood_great
   examples: |
@@ -83,6 +94,10 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - I am feeling upset
+    - I feel horrible 
+    - My day went bad 
+   
 
 - intent: bot_challenge
   examples: |
@@ -99,19 +114,63 @@ nlu:
     - I don't want to live 
     - I will take poison
     - I will leave this world
+    - I have problems
+    - I have financial problems
+    - I have family problems
+    - Nobody loves me 
+    - I have love failure
+    - Can you help me ?
+    - I need your guidance 
+    - I need someone
+    - I need support 
+    - I want a friend 
+    - I want a mentor 
+    - I am helpless
 
 - intent: joke
   examples: |
     - Can you tell me a joke ?
     - Can you joke
     - Do something fun
+    - I want to listen to a joke
+    - in the mood for a joke
+    - Amuse me
+    - Can you tell me something Hilarious
+    - Humour me 
+    - Tell me something good 
+    - Crack a joke
+    - Some josh
+
 - intent: quotes
   examples: |
     - I need motivation
     - I feel demotivated
     - I am not special 
     - I need inspiration
-    - I need purpose     
-
+    - I need purpose   
+    - Tell me a quote
+    - I want to know about life 
+    - I want to get to know the world
+    - I need to learn
+    - I am hopeless
+    - I need stimulus
+    - Persuade me 
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - I went to college today 
+    - I ate snacks today 
+    - where does the sun rise ?
+    - Can you sing  ?
+    - Can you dance?
+    - Shall we go out 
+    - I love you    
+    - Will you date me ?
+    - Do you think I am adopted ?
+    - do you love dogs ?
+    - I hate pizza
+    - Is there global warming ?
 
 
