@@ -5,28 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body style="color: #AEFEFF; background-color: #072227; text-align: center;">
+<body style="color: #072227; background-color: #072227; align-items: center; font-family: 'Montserrat', sans-serif; ">
 
+    <div>
+        <%dList.forEach(doctor=> {%>
+            <div style="width: 75%; border-color: #AEFEFF; border-width: 20px; background-color: #4FBDBA; margin: 20px; align-self: center;"
+                class="scaler">
+                <div style="display: inline;">
+                    Name: <%= doctor.name %> <br>
+                        Clinic Address: <%= doctor.address %> <br>
+                            Years of experience: <%= doctor.exp %><br>
+                                <!--<%= doctor.gform_link %><br>-->
+                                <!-- <%= doctor.specialization %><br> -->
+                                <!-- <img src="./images/doctor-icon-avatar-white_136162-58-removebg-preview.png" -->
+                                <!-- style="width:100px; height: 100px; display: inline;"> -->
+                </div>
+                <div style="position: relative; top: 25%; left: 75%">
 
-    <%dList.forEach(doctor=> {%>
-        <div style="width: 300px">
-            <div style="float: left">
-                <%= doctor.name %> <br>
-                    <%= doctor.address %> <br>
-                        <!-- <%= doctor.specialization %><br> -->
-                        <img src="/images/doctor-icon-avatar-white_136162-58-removebg-preview.png"
-                            style="width:100px; height: 100px">
-                        <%= doctor.years %><br>
+                    <a href="<%= doctor.gform_link %> ">
+                        Book an Appointment Now!</a>
+                </div>
             </div>
-            <button style="float: right" type="submit" name="submit"><a href="#">SUBMIT</a></button>
-        </div>
-        <%})%>
-
-            <!-- <table class="table">
+            <%})%>
+    </div>
+    <!-- <table class="table">
         <thead>
             <tr>
                 <th scope="col">Name</th>
